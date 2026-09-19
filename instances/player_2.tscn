@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://fdua4rlm8hqm"]
+
+[ext_resource type="Script" uid="uid://cbww35je07jxw" path="res://scripts/player_2.gd" id="1_a1ppo"]
+[ext_resource type="Texture2D" uid="uid://b5hplj7an287e" path="res://daven.png" id="1_mbmqc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_of06x"]
+size = Vector2(59, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iy36q"]
+size = Vector2(59, 14)
+
+[node name="Player2" type="RigidBody2D" unique_id=1442513464]
+script = ExtResource("1_a1ppo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=504151338]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_mbmqc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1956100359]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_of06x")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1917547499]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2040154544]
+position = Vector2(0.5, 30)
+shape = SubResource("RectangleShape2D_iy36q")
+
+[node name="RayCast2D" type="RayCast2D" parent="Area2D" unique_id=1567596890]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=2063639940]
+
+[connection signal="body_entered" from="Area2D" to="." method="collision"]

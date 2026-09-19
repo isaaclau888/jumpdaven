@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cratvj27upj52"]
+
+[ext_resource type="Script" uid="uid://cphqxwl5nxoah" path="res://scripts/win_screen.gd" id="1_wv5lq"]
+
+[node name="WinScreen" type="Control" unique_id=1387369382]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wv5lq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2095344137]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1560005182]
+layout_mode = 2
+text = "You Win!"
+horizontal_alignment = 1
+
+[node name="PlayAgainButton" type="Button" parent="VBoxContainer" unique_id=39153437]
+layout_mode = 2
+text = "Play Again"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer" unique_id=233892224]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1713734094]
+layout_mode = 2
+text = "Quit"

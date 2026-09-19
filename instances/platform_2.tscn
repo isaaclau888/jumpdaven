@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cj85pd2ubfl2o"]
+
+[ext_resource type="Script" uid="uid://r8mdfv37yobp" path="res://scripts/platform_2.gd" id="1_7lb37"]
+[ext_resource type="Texture2D" uid="uid://qxe54tp6663b" path="res://final-sign-up-call.png" id="1_dwgso"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_of06x"]
+size = Vector2(54, 13)
+
+[node name="Platform2" type="StaticBody2D" unique_id=693492989 groups=["Paddles"]]
+script = ExtResource("1_7lb37")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1507593489]
+position = Vector2(0, 45)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_dwgso")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=809872398]
+position = Vector2(0, 42.5)
+shape = SubResource("RectangleShape2D_of06x")
+one_way_collision = true
+one_way_collision_margin = 4.0
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=817444248]
+position = Vector2(0, 45)
