@@ -1,5 +1,6 @@
 # Loopy Master
-Jump Daven is a game for Jumpstart Haven
+Jump Daven is a game for Jumpstart Haven. And it is inspired by Doodle Jump.
 
-Use left or right key to control Daven.
+How to play:
+Use left or right key to control Daven. Jump up to the top to beat the game. 
 
